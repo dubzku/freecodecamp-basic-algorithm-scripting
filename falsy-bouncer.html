@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falsy Bouncer</title>
+</head>
+<body>
+
+    <script>
+        // Remove all falsy values from an array.
+        // Falsy values in JavaScript are false, null, 0, "", undefined, and NaN.
+
+        // bouncer([7, "ate", "", false, 9]) should return [7, "ate", 9].
+
+        // bouncer(["a", "b", "c"]) should return ["a", "b", "c"].
+
+        // bouncer([false, null, 0, NaN, undefined, ""]) should return [].
+
+        // bouncer([null, NaN, 1, 2, undefined]) should return [1, 2].
+
+        function bouncer(arr) {
+            // create an empty array to push the truthy values into
+            // loop through arr to check which ones are NOT falsys, and push them into the truthys array
+
+            let truthys = [];
+
+            for (let i = 0; i < arr.length; i++) {
+
+                if (arr[i] !== false && arr[i] !== null && arr[i] !== 0 && arr[i] !== "" && arr[i] !== undefined && !Number.isNaN(arr[i]) ) {
+                truthys.push(arr[i])
+                } 
+                
+            }
+
+            return truthys;
+        }
+        
+    </script>
+    
+</body>
+</html>

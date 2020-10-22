@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse A String</title>
+</head>
+<body>
+
+    <script>
+
+    // Reverse the provided string.
+    // You may need to turn the string into an array before you can reverse it.
+    // Your result must be a string.
+
+    // reverseString("hello") should return a string.
+    // reverseString("hello") should become "olleh".
+    // reverseString("Howdy") should become "ydwoH".
+    // reverseString("Greetings from Earth") should return "htraE morf sgniteerG".
+
+    function reverseString(str) {
+        // turn string into an array of letters (.split(""))
+        // reverse the array (.reverse())
+        // turn the array back into a string (.join())
+
+        let stringArray = str.split("").reverse().join("");
+  
+        return stringArray;
+    }
+
+    </script>
+</body>
+</html>
