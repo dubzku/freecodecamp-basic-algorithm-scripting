@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chunky Monkey</title>
+</head>
+<body>
+
+    <script>
+
+        // Write a function that splits an array (first argument) into groups the length of 
+        // size (second argument) and returns them as a two-dimensional array.
+
+        // chunkArrayInGroups(["a", "b", "c", "d"], 2) should return [["a", "b"], ["c", "d"]].
+        // chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3) should return [[0, 1, 2], [3, 4, 5]].
+        // chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2) should return [[0, 1], [2, 3], [4, 5]].
+        // chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4) should return [[0, 1, 2, 3], [4, 5]].
+        // chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6], 3) should return [[0, 1, 2], [3, 4, 5], [6]].
+        // chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4) should return [[0, 1, 2, 3], [4, 5, 6, 7], [8]].
+        // chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 2) should return [[0, 1], [2, 3], [4, 5], [6, 7], [8]].
+
+
+
+        function chunkArrayInGroups(arr, size) {
+            let resultArray = [];
+
+            while (arr.length > 0) {
+                // splice changes an array
+                // .splice(starting index for removing elements, number of elements)
+                resultArray.push(arr.splice(0, size)); 
+            }
+
+            return resultArray;
+        }
+
+        chunkArrayInGroups(["a", "b", "c", "d"], 2);
+
+    </script>
+    
+</body>
+</html>

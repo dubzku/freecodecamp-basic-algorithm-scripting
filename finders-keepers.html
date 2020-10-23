@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finders Keepers</title>
+</head>
+<body>
+
+    <script>
+        // Create a function that looks through an array arr and returns the first element in it 
+        // that passes a 'truth test'. This means that given an element x, the 'truth test' is passed 
+        // if func(x) is true. If no element passes the test, return undefined.
+
+
+        // findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; }) should return 8.
+        // findElement([1, 3, 5, 9], function(num) { return num % 2 === 0; }) should return undefined.
+
+
+        function findElement(arr, func) {
+            // loop through the array
+            // need an if condition 
+
+            for (let i = 0; i < arr.length; i++) {
+                let num = arr[i];
+
+                if (func(num)) {
+                    return num
+                };
+            }
+
+            // return undefined 
+        }
+        
+    </script>
+    
+</body>
+</html>
